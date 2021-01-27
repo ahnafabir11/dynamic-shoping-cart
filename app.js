@@ -28,10 +28,48 @@ decreaseBtn.addEventListener('click', function() {
     totalPhoneNum = 1;
   }
 
-  // phone price increasing
+  // phone price decreasing
   const phonePrice = document.getElementById('phone-price').innerText;
   let phonePriceNum = parseFloat(phonePrice);
   phonePriceNum = 1219 * totalPhoneNum;
   document.getElementById('phone-price').innerText = phonePriceNum;
+
+});
+
+
+// increasing case items and price
+const caseIncreseBtn = document.getElementById('increase-case-item');
+caseIncreseBtn.addEventListener('click', function() {
+  // case items increasing
+  const totalCase = document.getElementById('total-case').value;
+  let totalCaseNum = parseFloat(totalCase);
+  totalCaseNum++;
+  document.getElementById('total-case').value = totalCaseNum;
+
+  // phone price increasing
+  const casePrice = document.getElementById('case-price').innerText;
+  let casePriceNum = parseFloat(casePrice);
+  casePriceNum = 59 * totalCaseNum;
+  document.getElementById('case-price').innerText = casePriceNum;
+});
+
+// decreasing case items and price
+const caseDecreaseBtn = document.getElementById('decrease-case-item');
+caseDecreaseBtn.addEventListener('click', function () {
+  // case items decreasing
+  const totalCase = document.getElementById('total-case').value;
+  let totalCaseNum = parseFloat(totalCase);
+  totalCaseNum--;
+  if (totalCaseNum > 0) {
+    document.getElementById('total-case').value = totalCaseNum;
+  } else {
+    totalCaseNum = 1;
+  }
+
+  // case price decreasing
+  const casePrice = document.getElementById('case-price').innerText;
+  let casePriceNum = parseFloat(casePrice);
+  casePriceNum = 59 * totalCaseNum;
+  document.getElementById('case-price').innerText = casePriceNum;
 
 });
