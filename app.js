@@ -95,7 +95,7 @@ function totalCalculation(id, otherItemNum) {
 
   subTotalNum = priceNum + otherItemNum;
   totalTaxNum = (subTotalNum * 15) / 100;
-  totalNum = Math.ceil(subTotalNum - totalTaxNum);
+  totalNum = Math.ceil(subTotalNum + totalTaxNum);
 
   document.getElementById('sub-total').innerText = subTotalNum;
   document.getElementById('tax').innerText = totalTaxNum;
