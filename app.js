@@ -13,6 +13,24 @@ increaseBtn.addEventListener('click', function() {
   phonePriceNum = 1219 * totalPhoneNum;
   document.getElementById('phone-price').innerText = phonePriceNum;
 
+  // updating subtotal, tax and total Price
+  const casePrice = document.getElementById('case-price').innerText;
+  const casePriceNum = parseFloat(casePrice);
+  const subTotal = document.getElementById('sub-total').innerText;
+  let subTotalNum = parseFloat(subTotal);
+  const totalTax = document.getElementById('tax').innerText;
+  let totalTaxNum = parseFloat(totalTax);
+  const total = document.getElementById('total').innerText;
+  let totalNum = parseFloat(total);
+
+  subTotalNum = phonePriceNum + casePriceNum;
+  totalTaxNum = (subTotalNum * 15) / 100;
+  totalNum = Math.ceil(subTotalNum - totalTaxNum);
+
+  document.getElementById('sub-total').innerText = subTotalNum;
+  document.getElementById('tax').innerText = totalTaxNum;
+  document.getElementById('total').innerText = totalNum;
+
 });
 
 // decreasing items number
@@ -34,6 +52,24 @@ decreaseBtn.addEventListener('click', function() {
   phonePriceNum = 1219 * totalPhoneNum;
   document.getElementById('phone-price').innerText = phonePriceNum;
 
+  // updating subtotal, tax and total Price
+  const casePrice = document.getElementById('case-price').innerText;
+  const casePriceNum = parseFloat(casePrice);
+  const subTotal = document.getElementById('sub-total').innerText;
+  let subTotalNum = parseFloat(subTotal);
+  const totalTax = document.getElementById('tax').innerText;
+  let totalTaxNum = parseFloat(totalTax);
+  const total = document.getElementById('total').innerText;
+  let totalNum = parseFloat(total);
+
+  subTotalNum = phonePriceNum + casePriceNum;
+  totalTaxNum = (subTotalNum * 15) / 100;
+  totalNum = Math.ceil(subTotalNum - totalTaxNum);
+
+  document.getElementById('sub-total').innerText = subTotalNum;
+  document.getElementById('tax').innerText = totalTaxNum;
+  document.getElementById('total').innerText = totalNum;
+
 });
 
 
@@ -51,6 +87,25 @@ caseIncreseBtn.addEventListener('click', function() {
   let casePriceNum = parseFloat(casePrice);
   casePriceNum = 59 * totalCaseNum;
   document.getElementById('case-price').innerText = casePriceNum;
+
+  // updating subtotal and total Price
+  const phonePrice = document.getElementById('phone-price').innerText;
+  const phonePriceNum = parseFloat(phonePrice);
+  const subTotal = document.getElementById('sub-total').innerText;
+  let subTotalNum = parseFloat(subTotal);
+  const totalTax = document.getElementById('tax').innerText;
+  let totalTaxNum = parseFloat(totalTax);
+  const total = document.getElementById('total').innerText;
+  let totalNum = parseFloat(total);
+
+  subTotalNum = phonePriceNum + casePriceNum;
+  totalTaxNum = (subTotalNum * 15) / 100;
+  totalNum = Math.ceil(subTotalNum - totalTaxNum);
+
+  document.getElementById('sub-total').innerText = subTotalNum;
+  document.getElementById('tax').innerText = totalTaxNum;
+  document.getElementById('total').innerText = totalNum;
+
 });
 
 // decreasing case items and price
@@ -71,5 +126,23 @@ caseDecreaseBtn.addEventListener('click', function () {
   let casePriceNum = parseFloat(casePrice);
   casePriceNum = 59 * totalCaseNum;
   document.getElementById('case-price').innerText = casePriceNum;
+
+  // updating subtotal and total Price
+  const phonePrice = document.getElementById('phone-price').innerText;
+  const phonePriceNum = parseFloat(phonePrice);
+  const subTotal = document.getElementById('sub-total').innerText;
+  let subTotalNum = parseFloat(subTotal);
+  const totalTax = document.getElementById('tax').innerText;
+  let totalTaxNum = parseFloat(totalTax);
+  const total = document.getElementById('total').innerText;
+  let totalNum = parseFloat(total);
+
+  subTotalNum = phonePriceNum + casePriceNum;
+  totalTaxNum = (subTotalNum * 15) / 100;
+  totalNum = Math.ceil(subTotalNum - totalTaxNum);
+
+  document.getElementById('sub-total').innerText = subTotalNum;
+  document.getElementById('tax').innerText = totalTaxNum;
+  document.getElementById('total').innerText = totalNum;
 
 });
